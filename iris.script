@@ -1,0 +1,18 @@
+ do $SYSTEM.OBJ.Load("/irisdev/app/Installer.cls", "ck")
+ set sc = ##class(App.Installer).setup() 
+
+ zn "IRISAPP"
+ zpm "install pex-embbeded-python" 
+ do $System.OBJ.LoadDir("/irisdev/app/src","ck",,1)
+
+ set ^EnsPortal.Settings("SuperUser","LastProduction")	= "dc.Demo.Production"
+ 
+ zn "%SYS"
+ Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+ do ##class(Security.Services).Get("%Service_CallIn",.prop)
+ set prop("Enabled")=1
+ set prop("AutheEnabled")=48
+ do ##class(Security.Services).Modify("%Service_CallIn",.prop)
+
+halt
