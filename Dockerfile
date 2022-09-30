@@ -33,11 +33,15 @@ ENV IRISUSERNAME "SuperUser"
 ENV IRISPASSWORD "SYS"
 ENV IRISNAMESPACE "IRISAPP"
 
+# Install embedded python kernel
+RUN mkdir /home/irisowner/.local/share/jupyter/kernels/irispython
+COPY misc/kernels/irispython/* /home/irisowner/.local/share/jupyter/kernels/irispython/
+
 # create the namespace and install the application
 RUN iris start IRIS \
 	&& iris session IRIS < /tmp/iris.script \
     && /usr/irissys/bin/irispython src/python/register.py \
     && iris stop IRIS quietly
 
-
+ENTRYPOINT [ "/tini", "--", "/opt/irisapp/entrypoint.sh" ]
 
