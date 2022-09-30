@@ -7,7 +7,7 @@ services:
     restart: always
     command: --check-caps false
     ports: 
-      - 1972
+      - 57161:1972
       - 53795:52773
       - 53773
     volumes:
