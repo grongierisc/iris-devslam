@@ -41,7 +41,7 @@ Those data will help us to understand the benefit of column storage.
 
 on-prems :
 
-http://localhost:8888/notebooks/python/row_column/demo.ipynb
+http://127.0.0.1:8888/notebooks/row_column/demo.ipynb
 
 source file :
 
@@ -59,7 +59,7 @@ Will this option make IRIS slower ?
 
 on-prems :
 
-http://localhost:8888/notebooks/python/bench_redis_iris/demo.ipynb
+http://127.0.0.1:8888/notebooks/bench_redis_iris/demo.ipynb
 
 source file :
 
@@ -74,7 +74,7 @@ Just after reaching the speed of light, we will see how IRIS can be used as an S
 
 on-prems :
 
-http://localhost:8888/notebooks/python/multi_model/demo.ipynb
+http://127.0.0.1:8888/notebooks/multi_model/demo.ipynb
 
 source file :
 
