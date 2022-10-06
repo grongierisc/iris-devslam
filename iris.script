@@ -21,9 +21,13 @@
 
  do $System.OBJ.LoadDir("/irisdev/app/src","ck",,1)
 
- do ##class(NYTaxi.Utils).Load("/irisdev/app/misc/data/")
-
  set ^EnsPortal.Settings("SuperUser","LastProduction")	= "dc.Demo.Production"
  
+ zn "%SYS"
+
+ set db = "/opt/irisapp/data/"
+ set tDB = ##class(SYS.Database).%OpenId(db)
+ set tDB.GlobalJournalState = 2
+ do tDB.%Save()
 
 halt
