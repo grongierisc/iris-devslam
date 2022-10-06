@@ -1,4 +1,4 @@
-ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2022.2.0.334.0
+ARG IMAGE=intersystemsdc/iris-community:preview
 FROM $IMAGE
 
 # use the root user to install packages
@@ -43,5 +43,5 @@ RUN iris start IRIS \
     && /usr/irissys/bin/irispython src/python/register.py \
     && iris stop IRIS quietly
 
-ENTRYPOINT [ "/tini", "--", "/opt/irisapp/entrypoint.sh" ]
+ENTRYPOINT [ "/tini", "--", "/irisdev/app/entrypoint.sh" ]
 
