@@ -94,6 +94,3 @@ And finally we will talk about the python framework.
 
 This framework help you to organize you python code in a way that is easy to understand and easy to maintain.
 
-```
-
-```
