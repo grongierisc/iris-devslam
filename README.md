@@ -39,9 +39,13 @@ Then we will generate 1 billion of rows in less than 3 minutes.
 
 Those data will help us to understand the benefit of column storage.
 
-```
-jupyter link
-```
+on-prems :
+
+http://localhost:8888/notebooks/python/row_column/demo.ipynb
+
+source file :
+
+[link to github](https://github.com/grongierisc/iris-devslam/blob/master/src/python/row_column/demo.ipynb)
 
 ## Dimension **In-Memory and Disk**
 
@@ -53,10 +57,14 @@ Redis is an in-memory database, IRIS can alse act as an in-memory database with 
 
 Will this option make IRIS slower ?
 
+on-prems :
 
-```
-jupyter link.
-```
+http://localhost:8888/notebooks/python/bench_redis_iris/demo.ipynb
+
+source file :
+
+[link to github](https://github.com/grongierisc/iris-devslam/blob/master/src/python/bench_redis_iris/demo.ipynb)
+
 
 ## Dimension **SQL and NoSQL**
 
@@ -64,9 +72,13 @@ jupyter link.
 
 Just after reaching the speed of light, we will see how IRIS can be used as an SQL database and as an NoSQL database at the same time.
 
-```
-jupyter link.
-```
+on-prems :
+
+http://localhost:8888/notebooks/python/multi_model/demo.ipynb
+
+source file :
+
+[link to github](https://github.com/grongierisc/iris-devslam/blob/master/src/python/multi_model/demo.ipynb)
 
 ## **The python framework**
 
