@@ -11,8 +11,14 @@ ClassMethod AppendLastVector() As %Status
         while $order(@i@(max)) '= "" {
             set max = $order(@i@(max))
         }
-        set @i@(max+1) = @i@(max)
-        set @i@(max) = @i@(max-1)
+        if max >1 {
+            set @i@(max+1) = @i@(max)
+            set @i@(max) = @i@(max-1)
+        }
+        else {
+            set @i@(max+1) = @i@(max)
+        }
+
     }
     Return sc
 }
@@ -25,8 +31,13 @@ ClassMethod AppendLastVectorMix() As %Status
         while $order(@i@(max)) '= "" {
             set max = $order(@i@(max))
         }
-        set @i@(max+1) = @i@(max)
-        set @i@(max) = @i@(max-1)
+        if max >1 {
+            set @i@(max+1) = @i@(max)
+            set @i@(max) = @i@(max-1)
+        }
+        else {
+            set @i@(max+1) = @i@(max)
+        }
     }
     Return sc
 }
