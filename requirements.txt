@@ -1,4 +1,4 @@
-notebook==6.4.12
+notebook==7.0.6
 requests==2.25.1
 dataclasses_json==0.5.4
 numpy==1.23.3
