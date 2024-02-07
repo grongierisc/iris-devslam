@@ -1,4 +1,4 @@
-ARG IMAGE=intersystemsdc/iris-community:preview
+ARG IMAGE=intersystemsdc/iris-community:latest
 FROM $IMAGE
 
 # use the root user to install packages
@@ -32,6 +32,7 @@ RUN pip3 install -r requirements.txt
 ENV IRISUSERNAME "SuperUser"
 ENV IRISPASSWORD "SYS"
 ENV IRISNAMESPACE "IRISAPP"
+ENV LD_LIBRARY_PATH=${ISC_PACKAGE_INSTALLDIR}/bin:${LD_LIBRARY_PATH}
 
 # Install embedded python kernel
 RUN mkdir /home/irisowner/.local/share/jupyter/kernels/irispython
